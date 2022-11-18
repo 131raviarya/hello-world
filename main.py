@@ -3,7 +3,7 @@ import telebot
 TOKEN2 = '5577708184:AAHR7BlxQtbBz5848_ejzJ7-MCz8Vd72-yc'
 
 bot = telebot.TeleBot(TOKEN2)
-
+print(TOKEN2)
 def func():
     @bot.message_handler(content_types="text")
     def sender(message):
@@ -12,7 +12,7 @@ def func():
         id = message.chat.id
         msg = message.text
         bot.send_message(id, f'{name}\n{id}\n{msg}')
-
+        print(message.text)
     bot.polling()
 
 
